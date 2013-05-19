@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# Set of infinite poems that explore the dynamics of discussion and loss
+# in a situation where there is clearly no solution.
 
 import random
 import time
