@@ -10,7 +10,7 @@ objects = ["her", "him", "I", "us"]
 when = ["day", "month", "year", "moment"]
 desc = ["same", "next", "longest", "previous", "forgotten"]
 det = ["That", "The"]
-1
+
 while True:
     
     link1 = random.choice(linkers1)
