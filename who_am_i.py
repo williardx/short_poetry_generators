@@ -2,7 +2,7 @@
 #Poem generator that asks you what you are
 #and then tells you everything that you are.
 
-import random
+import random, time
 from nltk.corpus import wordnet as wn
 
 def is_a(what):
@@ -45,6 +45,7 @@ def poem(hnym_list):
         if '_' in word:
             word = remove_underscores(word)
         print "You are " + article(word) + ' ' + word
+        time.sleep(1.5)
 
 if __name__ == "__main__":
     word = raw_input("What are you?\n\n> ")
