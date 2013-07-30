@@ -32,7 +32,7 @@ def remove_underscores(word):
     l = word.split("_")
     return " ".join(l)
         
-def make_suggestions(word, n=20):
+def make_associations(word, n=20):
     '''
     Generate list of free associations.
     '''
@@ -57,7 +57,7 @@ def make_suggestions(word, n=20):
 
 if __name__ == "__main__":
     word = raw_input("Enter an input word.\n\n> ")
-    n = raw_input("How many suggestions would you like?\n\n> ")
+    n = raw_input("How many associations would you like?\n\n> ")
     if wn.synsets(word) == []:
         print "Unknown word. Try again."
     else:
@@ -65,3 +65,4 @@ if __name__ == "__main__":
         nymlist = make_suggestions(word,int(n))
         for nym in nymlist:
             print remove_underscores(nym)
+        print "\n"
