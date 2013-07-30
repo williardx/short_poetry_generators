@@ -17,15 +17,11 @@ def get_nyms(word, nym_method):
     for entry in synsets:
         nym_names = []
         nyms = getattr(entry, nym_method)()
-        #print nyms
         for n in nyms:
             names = n.lemma_names
-            #print names
             for name in names:
                 nym_names.append(name)
-                #print name
         nym_list.append(nym_names)
-        #print nym_list
     return sum(nym_list, [])
 
 def remove_underscores(word):
@@ -62,7 +58,7 @@ if __name__ == "__main__":
         print "Unknown word. Try again."
     else:
         print "\n"
-        nymlist = make_suggestions(word,int(n))
+        nymlist = make_associations(word,int(n))
         for nym in nymlist:
             print remove_underscores(nym)
         print "\n"
